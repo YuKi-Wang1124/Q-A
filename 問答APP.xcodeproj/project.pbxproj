@@ -14,6 +14,8 @@
 		CC60115F26DE663B00FC85DD /* __APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC60115D26DE663B00FC85DD /* __APP.xcdatamodeld */; };
 		CC60116126DE663E00FC85DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC60116026DE663E00FC85DD /* Assets.xcassets */; };
 		CC60116426DE663E00FC85DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC60116226DE663E00FC85DD /* LaunchScreen.storyboard */; };
+		CC60116C26DE696A00FC85DD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60116B26DE696A00FC85DD /* Question.swift */; };
+		CCD9824A26E86CC1006B3B7D /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = CCD9824926E86CC1006B3B7D /* CodableCSV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		CC60116026DE663E00FC85DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC60116326DE663E00FC85DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC60116526DE663E00FC85DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC60116B26DE696A00FC85DD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD9824A26E86CC1006B3B7D /* CodableCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 				CC60115626DE663B00FC85DD /* SceneDelegate.swift */,
 				CC60115826DE663B00FC85DD /* ViewController.swift */,
 				CC60115A26DE663B00FC85DD /* Main.storyboard */,
+				CC60116B26DE696A00FC85DD /* Question.swift */,
 				CC60116026DE663E00FC85DD /* Assets.xcassets */,
 				CC60116226DE663E00FC85DD /* LaunchScreen.storyboard */,
 				CC60116526DE663E00FC85DD /* Info.plist */,
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = "問答APP";
+			packageProductDependencies = (
+				CCD9824926E86CC1006B3B7D /* CodableCSV */,
+			);
 			productName = "問答APP";
 			productReference = CC60115126DE663B00FC85DD /* 問答APP.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = CC60114826DE663B00FC85DD;
+			packageReferences = (
+				CCD9824826E86CC1006B3B7D /* XCRemoteSwiftPackageReference "CodableCSV" */,
+			);
 			productRefGroup = CC60115226DE663B00FC85DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC60116C26DE696A00FC85DD /* Question.swift in Sources */,
 				CC60115926DE663B00FC85DD /* ViewController.swift in Sources */,
 				CC60115F26DE663B00FC85DD /* __APP.xcdatamodeld in Sources */,
 				CC60115526DE663B00FC85DD /* AppDelegate.swift in Sources */,
@@ -364,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCD9824826E86CC1006B3B7D /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCD9824926E86CC1006B3B7D /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCD9824826E86CC1006B3B7D /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CC60115D26DE663B00FC85DD /* __APP.xcdatamodeld */ = {
