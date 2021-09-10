@@ -24,11 +24,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         // 每次打開 APP 會更改題目順序
         questions.shuffle()
         changeContents()
-        
     }
     
     func changeContents() {
@@ -81,8 +79,14 @@ class ViewController: UIViewController {
     
     func alert(title: String, message: String, buttonText: String) {
         let alertController = UIAlertController (title: title, message: message, preferredStyle: .alert)
+        
         let alertButton = UIAlertAction(title: buttonText, style: .default, handler: {(_)in self.restart() })
+        
+        let cancelAlertButton = UIAlertAction(title: "取消", style: .destructive, handler: nil)
+        
         alertController.addAction(alertButton)
+        alertController.addAction(cancelAlertButton)
+        
         self.present(alertController, animated: true, completion: nil)
         }
         
